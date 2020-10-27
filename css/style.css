@@ -39,7 +39,8 @@ header #localisation span {
 }
 
 header #subHeader {
-  margin: 2em;
+  margin: 1em;
+  padding: 0.5em;
   padding-bottom: 3em;
 }
 
@@ -49,12 +50,12 @@ header #subHeader button {
 
 header #subHeader h2 {
   font-weight: 900;
-  margin-bottom: 0;
+  margin-bottom: 0.5em;
 }
 
 header #subHeader h3 {
   color: #656565;
-  font-weight: lighter;
+  font-weight: 400;
   margin: 0.4em;
 }
 
@@ -124,7 +125,7 @@ header #subHeader button {
 }
 
 #fonctionnement button i {
-  font-size: 25px;
+  font-size: 20px;
   margin: auto;
   margin-left: 1em;
   margin-right: 1em;
@@ -134,9 +135,92 @@ header #subHeader button {
 #restaurants {
   padding: 1em;
   background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #restaurants h2 {
-  margin: 2em;
+  margin: 1em;
+}
+
+#restaurants a {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: white;
+  margin-bottom: 2em;
+}
+
+#restaurants a img {
+  height: 200px;
+  width: 100%;
+}
+
+#restaurants a h3 {
+  margin: 0.75em;
+  margin-bottom: 0;
+}
+
+#restaurants a p {
+  margin: 0.75em;
+  margin-bottom: 1em;
+  font-weight: 300;
+  margin-top: 0.25em;
+}
+
+#restaurants a i {
+  float: right;
+  margin: 1em;
+  margin-top: -0.70em;
+  font-size: 25px;
+}
+
+#restaurants a i:hover {
+  background-color: #9356DC;
+}
+
+#restaurants a span {
+  position: absolute;
+  right: 0;
+  margin: 1.5em;
+  background-color: #99E2D0;
+  padding: 0.5em;
+  font-weight: bold;
+  color: #008766;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #353535;
+  margin-top: -20px;
+}
+
+footer ul {
+  padding: 1em;
+  list-style-type: none;
+}
+
+footer ul li {
+  color: white;
+  margin: 1em;
+}
+
+footer ul li i {
+  color: white;
+  margin-right: 1em;
+}
+
+#logoFooter {
+  width: 100px;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
