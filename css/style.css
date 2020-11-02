@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: 'Roboto', sans-serif;
 }
@@ -9,6 +10,14 @@ body {
 
 #logoContainer {
   text-align: center;
+}
+
+#logoContainer a {
+  color: black;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 20px;
 }
 
 #logoContainer img {
@@ -135,6 +144,13 @@ header #subHeader button {
 #restaurants {
   padding: 1em;
   background-color: #f6f6f6;
+}
+
+#restaurants h2 {
+  margin: 1em;
+}
+
+#restaurants div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,56 +158,53 @@ header #subHeader button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-#restaurants h2 {
-  margin: 1em;
-}
-
-#restaurants a {
+#restaurants div a {
   width: 100%;
   margin: auto;
   overflow: hidden;
   border-radius: 15px;
   background-color: white;
   margin-bottom: 2em;
+  text-decoration: none;
+  color: black;
 }
 
-#restaurants a img {
+#restaurants div a img {
   height: 200px;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-#restaurants a h3 {
+#restaurants div a h3 {
   margin: 0.75em;
   margin-bottom: 0;
 }
 
-#restaurants a p {
+#restaurants div a p {
   margin: 0.75em;
   margin-bottom: 1em;
   font-weight: 300;
   margin-top: 0.25em;
 }
 
-#restaurants a i {
+#restaurants div a i {
   float: right;
   margin: 1em;
   margin-top: -0.70em;
   font-size: 25px;
 }
 
-#restaurants a i:hover {
+#restaurants div a i:hover {
   background-color: #9356DC;
 }
 
-#restaurants a span {
-  position: absolute;
-  right: 0;
-  margin: 1.5em;
+#restaurants div a span {
+  position: relative;
+  right: -77%;
+  top: -190px;
   background-color: #99E2D0;
   padding: 0.5em;
   font-weight: bold;
@@ -201,20 +214,22 @@ header #subHeader button {
 
 footer {
   background-color: #353535;
-  margin-top: -20px;
+  margin: 0;
+  padding: 0;
 }
 
 footer ul {
+  margin: 0;
   padding: 1em;
   list-style-type: none;
 }
 
-footer ul li {
+footer li {
   color: white;
   margin: 1em;
 }
 
-footer ul li i {
+footer li i {
   color: white;
   margin-right: 1em;
 }
@@ -222,5 +237,159 @@ footer ul li i {
 #logoFooter {
   width: 100px;
   color: white;
+}
+
+/** Page Menu **/
+#menuFr {
+  background-image: url(../img/français.jpg);
+}
+
+#menuPalette {
+  background-image: url(../img/palette.jpg);
+}
+
+#menuEnchanté {
+  background-image: url(../img/note.jpg);
+}
+
+#menuDélice {
+  background-image: url(../img/délice.jpg);
+}
+
+#menuFr, #menuPalette, #menuEnchanté, #menuDélice {
+  background-position: top;
+  background-size: 400px;
+  padding-top: 200px;
+}
+
+#menuFr #menuCotaniner, #menuPalette #menuCotaniner, #menuEnchanté #menuCotaniner, #menuDélice #menuCotaniner {
+  padding-top: 1em;
+  background-color: #f6f6f6;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+#menuFr #menuCotaniner h2, #menuPalette #menuCotaniner h2, #menuEnchanté #menuCotaniner h2, #menuDélice #menuCotaniner h2 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 25px;
+  margin: 1em;
+}
+
+#menuFr #menuCotaniner h2 i, #menuPalette #menuCotaniner h2 i, #menuEnchanté #menuCotaniner h2 i, #menuDélice #menuCotaniner h2 i {
+  float: right;
+}
+
+#menuFr #menuCotaniner h4, #menuPalette #menuCotaniner h4, #menuEnchanté #menuCotaniner h4, #menuDélice #menuCotaniner h4 {
+  font-weight: 300;
+  margin: 1em;
+  text-decoration: underline;
+}
+
+#menuFr #menuCotaniner ul, #menuPalette #menuCotaniner ul, #menuEnchanté #menuCotaniner ul, #menuDélice #menuCotaniner ul {
+  padding: 1em;
+  margin: 0;
+}
+
+#menuFr #menuCotaniner ul li, #menuPalette #menuCotaniner ul li, #menuEnchanté #menuCotaniner ul li, #menuDélice #menuCotaniner ul li {
+  border-radius: 20px;
+  margin-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  overflow: hidden;
+}
+
+#menuFr #menuCotaniner ul li h4, #menuPalette #menuCotaniner ul li h4, #menuEnchanté #menuCotaniner ul li h4, #menuDélice #menuCotaniner ul li h4 {
+  margin: 0.75em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+#menuFr #menuCotaniner ul li #subMenu, #menuPalette #menuCotaniner ul li #subMenu, #menuEnchanté #menuCotaniner ul li #subMenu, #menuDélice #menuCotaniner ul li #subMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#menuFr #menuCotaniner ul li #subMenu p, #menuFr #menuCotaniner ul li #subMenu span, #menuPalette #menuCotaniner ul li #subMenu p, #menuPalette #menuCotaniner ul li #subMenu span, #menuEnchanté #menuCotaniner ul li #subMenu p, #menuEnchanté #menuCotaniner ul li #subMenu span, #menuDélice #menuCotaniner ul li #subMenu p, #menuDélice #menuCotaniner ul li #subMenu span {
+  margin: 0.75em;
+  margin-top: 0;
+}
+
+#menuFr #menuCotaniner ul li #subMenu span, #menuPalette #menuCotaniner ul li #subMenu span, #menuEnchanté #menuCotaniner ul li #subMenu span, #menuDélice #menuCotaniner ul li #subMenu span {
+  font-weight: 600;
+}
+
+#menuFr #menuCotaniner ul li:hover .check, #menuPalette #menuCotaniner ul li:hover .check, #menuEnchanté #menuCotaniner ul li:hover .check, #menuDélice #menuCotaniner ul li:hover .check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#menuFr #menuCotaniner ul li .check, #menuPalette #menuCotaniner ul li .check, #menuEnchanté #menuCotaniner ul li .check, #menuDélice #menuCotaniner ul li .check {
+  display: none;
+  background-color: #99E2D0;
+  position: absolute;
+}
+
+#menuFr #menuCotaniner ul li .check i, #menuPalette #menuCotaniner ul li .check i, #menuEnchanté #menuCotaniner ul li .check i, #menuDélice #menuCotaniner ul li .check i {
+  color: white;
+}
+
+#btnContainerCommander {
+  text-align: center;
+  width: 100%;
+  margin-top: 1em;
+  padding-bottom: 3em;
+}
+
+#btnCommander {
+  width: 50%;
+  color: white;
+  border-radius: 30px;
+  padding: 1em;
+  font-size: 17px;
+  background-color: #9356DC;
+  border: 0px;
+  background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  font-size: 15px;
+}
+
+@media (min-width: 750px) {
+  #logoContainer img {
+    width: 20%;
+  }
+  #restaurants div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #restaurants div a {
+    width: 25%;
+    margin: 1em;
+  }
+  #restaurants div a img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 /*# sourceMappingURL=style.css.map */
