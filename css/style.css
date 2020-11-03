@@ -161,6 +161,7 @@ header #subHeader button {
 }
 
 #restaurants div a {
+  position: relative;
   width: 100%;
   margin: auto;
   overflow: hidden;
@@ -191,20 +192,34 @@ header #subHeader button {
 }
 
 #restaurants div a i {
-  float: right;
-  margin: 1em;
-  margin-top: -0.70em;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
   font-size: 25px;
 }
 
-#restaurants div a i:hover {
-  background-color: #9356DC;
+#restaurants div a .emptyHeart {
+  z-index: 200;
+}
+
+#restaurants div a .emptyHeart:hover {
+  display: none;
+}
+
+#restaurants div a .fullHeart {
+  z-index: 100;
+  color: white;
+}
+
+#restaurants div a .fullHeart:hover {
+  color: #9356DC;
+  z-index: 250;
 }
 
 #restaurants div a span {
-  position: relative;
-  right: -77%;
-  top: -190px;
+  position: absolute;
+  top: 1em;
+  right: 1em;
   background-color: #99E2D0;
   padding: 0.5em;
   font-weight: bold;
@@ -287,7 +302,6 @@ footer li i {
 
 #menuFr #menuCotaniner ul, #menuPalette #menuCotaniner ul, #menuEnchanté #menuCotaniner ul, #menuDélice #menuCotaniner ul {
   padding: 1em;
-  margin: 0;
 }
 
 #menuFr #menuCotaniner ul li, #menuPalette #menuCotaniner ul li, #menuEnchanté #menuCotaniner ul li, #menuDélice #menuCotaniner ul li {

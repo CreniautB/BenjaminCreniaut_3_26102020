@@ -178,6 +178,7 @@ header
         flex-direction: column;
         a
         {
+            position: relative;
             width: 100%;
             margin: auto;
             overflow: hidden;
@@ -212,21 +213,37 @@ header
 
             i
             {
-                float: right;
-                margin: 1em;
-                margin-top: -0.70em;
+                position: absolute;
+                bottom: 1em;
+                right: 1em;
                 font-size: 25px;
+            }
+
+            .emptyHeart
+            {
+                z-index: 200;
                     &:hover
                     {
-                        background-color: $basecolor;
+                        display: none;
+                    }
+            }
+
+            .fullHeart
+            {
+                z-index: 100;
+                color: white;
+                    &:hover
+                    {
+                        color: $basecolor;
+                        z-index: 250;
                     }
             }
            
             span 
             {
-                position: relative;
-                right: -77%;
-                top: -190px;
+                position: absolute;
+                top: 1em;
+                right: 1em;
                 background-color: $terColor;  
                 padding: 0.5em;
                 font-weight: bold;     
@@ -330,7 +347,6 @@ footer
         ul
         {
             padding: 1em;
-            margin: 0;
 
             li
             {
@@ -463,5 +479,4 @@ footer
         }
     }
 }
-
 
