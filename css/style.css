@@ -8,6 +8,78 @@ body {
   margin: 0;
 }
 
+#spinner {
+  position: fixed;
+  background-color: grey;
+  -webkit-animation: spinner ease-out 2s;
+          animation: spinner ease-out 2s;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    opacity: 100%;
+    z-index: 1001;
+  }
+  50% {
+    opacity: 95%;
+    z-index: 1001;
+  }
+  75% {
+    opacity: 75%;
+    z-index: 1001;
+  }
+  100% {
+    opacity: 0%;
+    z-index: 0;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    opacity: 100%;
+    z-index: 1001;
+  }
+  50% {
+    opacity: 95%;
+    z-index: 1001;
+  }
+  75% {
+    opacity: 75%;
+    z-index: 1001;
+  }
+  100% {
+    opacity: 0%;
+    z-index: 0;
+  }
+}
+
+#spinner i {
+  position: relative;
+  top: 50%;
+  left: 49%;
+  font-size: 40px;
+  color: #f6f6f6;
+  -webkit-animation: spinBurger 2s linear infinite;
+          animation: spinBurger 2s linear infinite;
+}
+
+@-webkit-keyframes spinBurger {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinBurger {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 #logoContainer {
   text-align: center;
 }
@@ -158,65 +230,86 @@ header #subHeader button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#restaurants div a {
+#restaurants div .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
   width: 100%;
-  margin: auto;
+  margin: 1em;
   overflow: hidden;
   border-radius: 15px;
   background-color: white;
   margin-bottom: 2em;
   text-decoration: none;
   color: black;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
 }
 
-#restaurants div a img {
+#restaurants div .card a {
+  width: 100%;
+  margin: 0;
+}
+
+#restaurants div .card a img {
   height: 200px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-#restaurants div a h3 {
+#restaurants div .card h3 {
   margin: 0.75em;
   margin-bottom: 0;
 }
 
-#restaurants div a p {
+#restaurants div .card p {
   margin: 0.75em;
   margin-bottom: 1em;
   font-weight: 300;
   margin-top: 0.25em;
 }
 
-#restaurants div a i {
+#restaurants div .card .toggle-heart {
   position: absolute;
-  bottom: 1em;
-  right: 1em;
-  font-size: 25px;
+  right: 15px;
+  bottom: 20px;
+  opacity: 0;
+  z-index: 1000;
+  height: 25px;
 }
 
-#restaurants div a .emptyHeart {
-  z-index: 200;
-}
-
-#restaurants div a .emptyHeart:hover {
+#restaurants div .card .toggle-heart + label .fullHeart {
   display: none;
 }
 
-#restaurants div a .fullHeart {
-  z-index: 100;
-  color: white;
+#restaurants div .card .toggle-heart:checked + label .emptyHeart {
+  display: none;
 }
 
-#restaurants div a .fullHeart:hover {
+#restaurants div .card .toggle-heart:checked + label .fullHeart {
   color: #9356DC;
-  z-index: 250;
+  display: block;
 }
 
-#restaurants div a span {
+#restaurants div .card .emptyHeart, #restaurants div .card .fullHeart {
+  position: absolute;
+  right: 15px;
+  bottom: 20px;
+  font-size: 23px;
+}
+
+#restaurants div .card span {
   position: absolute;
   top: 1em;
   right: 1em;
@@ -277,6 +370,13 @@ footer li i {
   padding-top: 200px;
 }
 
+#menuFr #menuCotaniner > h4, #menuPalette #menuCotaniner > h4, #menuEnchanté #menuCotaniner > h4, #menuDélice #menuCotaniner > h4 {
+  padding: 0.3em;
+  padding-left: 0;
+  border-bottom: 3px solid #99E2D0;
+  width: 10%;
+}
+
 #menuFr #menuCotaniner, #menuPalette #menuCotaniner, #menuEnchanté #menuCotaniner, #menuDélice #menuCotaniner {
   padding-top: 1em;
   background-color: #f6f6f6;
@@ -297,7 +397,6 @@ footer li i {
 #menuFr #menuCotaniner h4, #menuPalette #menuCotaniner h4, #menuEnchanté #menuCotaniner h4, #menuDélice #menuCotaniner h4 {
   font-weight: 300;
   margin: 1em;
-  text-decoration: underline;
 }
 
 #menuFr #menuCotaniner ul, #menuPalette #menuCotaniner ul, #menuEnchanté #menuCotaniner ul, #menuDélice #menuCotaniner ul {
@@ -305,28 +404,9 @@ footer li i {
 }
 
 #menuFr #menuCotaniner ul li, #menuPalette #menuCotaniner ul li, #menuEnchanté #menuCotaniner ul li, #menuDélice #menuCotaniner ul li {
+  position: relative;
   border-radius: 20px;
   margin-bottom: 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: white;
-  overflow: hidden;
-}
-
-#menuFr #menuCotaniner ul li h4, #menuPalette #menuCotaniner ul li h4, #menuEnchanté #menuCotaniner ul li h4, #menuDélice #menuCotaniner ul li h4 {
-  margin: 0.75em;
-  margin-bottom: 0.5em;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-#menuFr #menuCotaniner ul li #subMenu, #menuPalette #menuCotaniner ul li #subMenu, #menuEnchanté #menuCotaniner ul li #subMenu, #menuDélice #menuCotaniner ul li #subMenu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -337,31 +417,111 @@ footer li i {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: white;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  -webkit-animation: fadeIn ease 2s;
+          animation: fadeIn ease 2s;
 }
 
-#menuFr #menuCotaniner ul li #subMenu p, #menuFr #menuCotaniner ul li #subMenu span, #menuPalette #menuCotaniner ul li #subMenu p, #menuPalette #menuCotaniner ul li #subMenu span, #menuEnchanté #menuCotaniner ul li #subMenu p, #menuEnchanté #menuCotaniner ul li #subMenu span, #menuDélice #menuCotaniner ul li #subMenu p, #menuDélice #menuCotaniner ul li #subMenu span {
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    bottom: -30px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    bottom: -30px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+#menuFr #menuCotaniner ul li .titleMenu h4, #menuPalette #menuCotaniner ul li .titleMenu h4, #menuEnchanté #menuCotaniner ul li .titleMenu h4, #menuDélice #menuCotaniner ul li .titleMenu h4 {
   margin: 0.75em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+#menuFr #menuCotaniner ul li .titleMenu p, #menuPalette #menuCotaniner ul li .titleMenu p, #menuEnchanté #menuCotaniner ul li .titleMenu p, #menuDélice #menuCotaniner ul li .titleMenu p {
+  margin-left: 0.75em;
   margin-top: 0;
+}
+
+#menuFr #menuCotaniner ul li #subMenu, #menuPalette #menuCotaniner ul li #subMenu, #menuEnchanté #menuCotaniner ul li #subMenu, #menuDélice #menuCotaniner ul li #subMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #menuFr #menuCotaniner ul li #subMenu span, #menuPalette #menuCotaniner ul li #subMenu span, #menuEnchanté #menuCotaniner ul li #subMenu span, #menuDélice #menuCotaniner ul li #subMenu span {
   font-weight: 600;
+  margin: 1em;
+  margin-top: 80%;
+}
+
+#menuFr #menuCotaniner ul li .check, #menuPalette #menuCotaniner ul li .check, #menuEnchanté #menuCotaniner ul li .check, #menuDélice #menuCotaniner ul li .check {
+  width: 70px;
+  background-color: #99E2D0;
+  position: absolute;
+  right: -100px;
+  height: 100%;
+}
+
+#menuFr #menuCotaniner ul li:hover #subMenu span, #menuPalette #menuCotaniner ul li:hover #subMenu span, #menuEnchanté #menuCotaniner ul li:hover #subMenu span, #menuDélice #menuCotaniner ul li:hover #subMenu span {
+  -webkit-transform: translateX(-70px);
+          transform: translateX(-70px);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+#menuFr #menuCotaniner ul li:hover #subMenu p, #menuPalette #menuCotaniner ul li:hover #subMenu p, #menuEnchanté #menuCotaniner ul li:hover #subMenu p, #menuDélice #menuCotaniner ul li:hover #subMenu p {
+  white-space: pre;
+  overflow: hidden;
 }
 
 #menuFr #menuCotaniner ul li:hover .check, #menuPalette #menuCotaniner ul li:hover .check, #menuEnchanté #menuCotaniner ul li:hover .check, #menuDélice #menuCotaniner ul li:hover .check {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-#menuFr #menuCotaniner ul li .check, #menuPalette #menuCotaniner ul li .check, #menuEnchanté #menuCotaniner ul li .check, #menuDélice #menuCotaniner ul li .check {
-  display: none;
   background-color: #99E2D0;
-  position: absolute;
+  opacity: 1;
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
 }
 
-#menuFr #menuCotaniner ul li .check i, #menuPalette #menuCotaniner ul li .check i, #menuEnchanté #menuCotaniner ul li .check i, #menuDélice #menuCotaniner ul li .check i {
+#menuFr #menuCotaniner ul li:hover .check i, #menuPalette #menuCotaniner ul li:hover .check i, #menuEnchanté #menuCotaniner ul li:hover .check i, #menuDélice #menuCotaniner ul li:hover .check i {
+  font-size: 25px;
+  margin: auto;
   color: white;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }
 
 #btnContainerCommander {
@@ -385,6 +545,10 @@ footer li i {
 }
 
 @media (min-width: 750px) {
+  #menuFr, #menuPalette, #menuEnchanté, #menuDélice {
+    background-size: cover;
+    background-position: top;
+  }
   #logoContainer img {
     width: 20%;
   }
@@ -404,6 +568,14 @@ footer li i {
   #restaurants div a img {
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 /*# sourceMappingURL=style.css.map */
