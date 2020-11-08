@@ -11,8 +11,8 @@ body {
 #spinner {
   position: fixed;
   background-color: grey;
-  -webkit-animation: spinner ease-out 2s;
-          animation: spinner ease-out 2s;
+  -webkit-animation: spinner ease-out 1.5s;
+          animation: spinner ease-out 1.5s;
   height: 100%;
   width: 100%;
   opacity: 0;
@@ -62,21 +62,21 @@ body {
   left: 49%;
   font-size: 40px;
   color: #f6f6f6;
-  -webkit-animation: spinBurger 2s linear infinite;
-          animation: spinBurger 2s linear infinite;
+  -webkit-animation: spinBurger 1.5s linear infinite;
+          animation: spinBurger 1.5s linear infinite;
 }
 
 @-webkit-keyframes spinBurger {
   100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
   }
 }
 
 @keyframes spinBurger {
   100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
   }
 }
 
@@ -516,12 +516,12 @@ footer li i {
   font-size: 25px;
   margin: auto;
   color: white;
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+  -webkit-transition: -webkit-transform 0.75s;
+  transition: -webkit-transform 0.75s;
+  transition: transform 0.75s;
+  transition: transform 0.75s, -webkit-transform 0.75s;
 }
 
 #btnContainerCommander {
