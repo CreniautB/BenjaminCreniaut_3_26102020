@@ -22,23 +22,31 @@ body
 {
     position: fixed;
     background-color: grey;
-    
-    animation: spinner ease-out 1.5s;
-    height: 100%;
+    animation: spinner ease-in 1.5s;
+    height: 0%;
     width: 100%;
     opacity: 0;
-
-
+    top: 0;
+    right: 0;
 
     @keyframes spinner {
         0% { opacity: 100%;
-            z-index: 1001;}
-        50% { opacity: 95%;
-            z-index: 1001;}
+           }
+        1%{
+            height: 100%;
+            opacity: 100%;
+        }
+        50% { opacity: 100%;
+           }
         75% {opacity: 75%;
-            z-index: 1001;}
+            }
+        99%{
+            opacity: 40%;
+            height: 100%;
+        }
         100% { opacity: 0%;
-        z-index: 0;}
+            height: 0%;
+     }
     
     }
 
@@ -82,7 +90,7 @@ header
 {
     
     text-align: center;
-
+    z-index: 1002;
     background-color: #f6f6f6;
    
 
@@ -129,16 +137,8 @@ header
 
         }
 
-        button
-        {
-            color: white;
-            border-radius: 30px;
-            padding: 1em;
-            font-size: 17px;
-            background-color: $basecolor;
-            border : 0px;
-            background: linear-gradient(to top left, $basecolor , $secondColor);
-        }
+
+
     }
     
 }
@@ -469,6 +469,8 @@ footer
                         font-weight: bold;
                         text-decoration: none;
                         font-size: 18px;
+
+
                     }
                 
                     p 
@@ -506,14 +508,18 @@ footer
                     
                 }
                 
+
+
                 &:hover 
                 {
+
+
                     #subMenu 
                     
                     {
                         span
                         {
-                            transform :translateX(-70px);
+                            transform : translateX(-70px);
                             transition: transform 0.5s;
                         }
                         p
@@ -552,16 +558,15 @@ footer
     
 }
 
-#btnContainerCommander
+.btnContainerCommander
 {
     text-align: center;
     width: 100%;
     margin-top: 1em;
     padding-bottom: 3em;
 }
-#btnCommander
+.btn
 {
-    width: 50%;
     color: white;
     border-radius: 30px;
     padding: 1em;
@@ -569,7 +574,14 @@ footer
     background-color: $basecolor;
     border : 0px;
     background: linear-gradient(to top left, $basecolor , $secondColor);
-    font-size: 15px;
+    min-width: 25%;
+
+    &:hover
+    {
+        background : linear-gradient(to bottom right, $basecolor, $secondColor)
+    }
+
+
 }
 
 

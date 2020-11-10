@@ -11,48 +11,60 @@ body {
 #spinner {
   position: fixed;
   background-color: grey;
-  -webkit-animation: spinner ease-out 1.5s;
-          animation: spinner ease-out 1.5s;
-  height: 100%;
+  -webkit-animation: spinner ease-in 1.5s;
+          animation: spinner ease-in 1.5s;
+  height: 0%;
   width: 100%;
   opacity: 0;
+  top: 0;
+  right: 0;
 }
 
 @-webkit-keyframes spinner {
   0% {
     opacity: 100%;
-    z-index: 1001;
+  }
+  1% {
+    height: 100%;
+    opacity: 100%;
   }
   50% {
-    opacity: 95%;
-    z-index: 1001;
+    opacity: 100%;
   }
   75% {
     opacity: 75%;
-    z-index: 1001;
+  }
+  99% {
+    opacity: 40%;
+    height: 100%;
   }
   100% {
     opacity: 0%;
-    z-index: 0;
+    height: 0%;
   }
 }
 
 @keyframes spinner {
   0% {
     opacity: 100%;
-    z-index: 1001;
+  }
+  1% {
+    height: 100%;
+    opacity: 100%;
   }
   50% {
-    opacity: 95%;
-    z-index: 1001;
+    opacity: 100%;
   }
   75% {
     opacity: 75%;
-    z-index: 1001;
+  }
+  99% {
+    opacity: 40%;
+    height: 100%;
   }
   100% {
     opacity: 0%;
-    z-index: 0;
+    height: 0%;
   }
 }
 
@@ -99,6 +111,7 @@ body {
 
 header {
   text-align: center;
+  z-index: 1002;
   background-color: #f6f6f6;
 }
 
@@ -138,17 +151,6 @@ header #subHeader h3 {
   color: #656565;
   font-weight: 400;
   margin: 0.4em;
-}
-
-header #subHeader button {
-  color: white;
-  border-radius: 30px;
-  padding: 1em;
-  font-size: 17px;
-  background-color: #9356DC;
-  border: 0px;
-  background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(to top left, #9356DC, #FF79DA);
 }
 
 #fonctionnement {
@@ -524,15 +526,14 @@ footer li i {
   transition: transform 0.75s, -webkit-transform 0.75s;
 }
 
-#btnContainerCommander {
+.btnContainerCommander {
   text-align: center;
   width: 100%;
   margin-top: 1em;
   padding-bottom: 3em;
 }
 
-#btnCommander {
-  width: 50%;
+.btn {
   color: white;
   border-radius: 30px;
   padding: 1em;
@@ -541,7 +542,12 @@ footer li i {
   border: 0px;
   background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
   background: linear-gradient(to top left, #9356DC, #FF79DA);
-  font-size: 15px;
+  min-width: 25%;
+}
+
+.btn:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to bottom right, #9356DC, #FF79DA);
 }
 
 @media (min-width: 750px) {
