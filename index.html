@@ -23,7 +23,7 @@
 
         
         <div id="localisation">
-            <i class="fas fa-map-marker-alt"></i><span>Paris, Belleville</span>
+            <i class="fas fa-map-marker-alt"></i><input type="text" placeholder="Paris, Belleville">
         </div>
 
         <div id="subHeader">
@@ -51,18 +51,18 @@
             Fonctionnement
         </h2>
 
-        <button>
-            <span>1</span><i class="fas fa-mobile-alt"></i><h3>Choisissez un restaurant</h3>
-        </button>
-        
-        <button>
-            <span>2</span><i class="fas fa-list-ul"></i><h3>Composez votre menu</h3>
-        </button>
-
-        <button>
-            <span>3</span><i class="fas fa-store"></i><h3>Dégustez au restaurant</h3>
-        </button>
-
+        <ul>
+            <li>
+                <span>1</span><i class="fas fa-mobile-alt"></i><h3>Choisissez un restaurant</h3>
+            </li>
+            <li>
+                <span>2</span><i class="fas fa-list-ul"></i><h3>Composez votre menu</h3>
+            </li>
+            <li>
+                <span>3</span><i class="fas fa-store"></i><h3>Dégustez au restaurant</h3>
+            </li>
+        </ul>
+    
 
     </section>
 
@@ -72,7 +72,7 @@
         
         <div>
 
-            <div class="card">
+            <article class="card">
            
                 <a href="palette.html" >
                     
@@ -83,17 +83,17 @@
 
                 <h3>La palette du gôut</h3>
 
-                <input class="toggle-heart" type="checkbox"/>
-                <label for=".toggle-heart" aria-label="like">
+                <input id="toggle-heart" type="checkbox"/>
+                <label for="toggle-heart" aria-label="like">
                     <i class="far fa-heart emptyHeart"></i><i class="fas fa-heart fullHeart "></i>
                 </label>
 
                 <p>Ménilmontant</p>
 
-            </div>
+            </article>
 
 
-            <div class="card">
+            <article class="card">
                
                 <a href="enchanté.html" >
                     
@@ -102,16 +102,16 @@
                 </a>
                     <h3>La note enchanté</h3>
                   
-                    <input class="toggle-heart" type="checkbox"/>
-                    <label for=".toggle-heart" aria-label="like">
+                    <input id="toggle-heart1" type="checkbox"/>
+                    <label for="toggle-heart1" aria-label="like">
                         <i class="far fa-heart emptyHeart"></i><i class="fas fa-heart fullHeart "></i>
                     </label>
 
                     <p>Charonne</p>
                 
-            </div>
+            </article>
             
-            <div class="card">
+            <article class="card">
               
                 <a href="française.html">
                     <img src="img/français.jpg" alt="A la française">
@@ -119,17 +119,17 @@
               
                 <h3>A la française</h3>
               
-                <input class="toggle-heart" type="checkbox"/>
-                <label for=".toggle-heart" aria-label="like">
+                <input id="toggle-heart2" type="checkbox"/>
+                <label for="toggle-heart2" aria-label="like">
                     <i class="far fa-heart emptyHeart"></i><i class="fas fa-heart fullHeart "></i>
                 </label>
                 
                 <p>Cité Rouge</p>
               
                 
-            </div>
+            </article>
             
-            <div class="card">
+            <article class="card">
               
                 <a href="délice.html">
                     
@@ -138,14 +138,14 @@
                 
                 <h3>Le délice des sens</h3>
               
-                <input class="toggle-heart" type="checkbox"/>
-                <label for=".toggle-heart" aria-label="like">
+                <input id="toggle-heart3" type="checkbox"/>
+                <label for="toggle-heart3" aria-label="like">
                     <i class="far fa-heart emptyHeart"></i><i class="fas fa-heart fullHeart "></i>
                 </label>
                
                 <p>Folie-Méricourt</p>
                 
-            </div>
+            </article>
        
         </div>
 
