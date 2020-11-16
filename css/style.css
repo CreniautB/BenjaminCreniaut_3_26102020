@@ -462,6 +462,8 @@ footer li i {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -470,6 +472,8 @@ footer li i {
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  max-height: 100px;
+  white-space: nowrap;
   -webkit-animation: fadeIn ease 2s;
           animation: fadeIn ease 2s;
 }
@@ -502,11 +506,17 @@ footer li i {
   font-weight: bold;
   text-decoration: none;
   font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .menu .menuCotaniner ul li .titleMenu p {
   margin-left: 0.75em;
   margin-top: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .menu .menuCotaniner ul li .subMenu {
@@ -531,6 +541,19 @@ footer li i {
   position: absolute;
   right: -100px;
   height: 100%;
+}
+
+.menu .menuCotaniner ul li:hover .titleMenu {
+  width: 65%;
+}
+
+.menu .menuCotaniner ul li:hover .subMenu span {
+  -webkit-transform: translateX(-70px);
+          transform: translateX(-70px);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 .menu .menuCotaniner ul li:hover .subMenu p {

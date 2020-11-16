@@ -466,6 +466,7 @@ footer
                 margin-bottom: 1em;
                 display: flex;
                 flex-direction: row;
+                flex-wrap: nowrap;
                 justify-content: space-between;
                 background-color: white;
                 overflow: hidden;
@@ -473,6 +474,8 @@ footer
                 -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.10);
                 box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.10);
                 overflow: hidden;
+                max-height: 100px;
+                white-space: nowrap;
                 
                 animation: fadeIn ease 2s;
             
@@ -491,7 +494,11 @@ footer
                 }
 
                 .titleMenu 
-                {
+                { 
+
+                
+
+            
                     h4
                     {
                         margin: 0.75em;
@@ -499,7 +506,10 @@ footer
                         font-weight: bold;
                         text-decoration: none;
                         font-size: 18px;
-
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        
 
                     }
                 
@@ -508,6 +518,9 @@ footer
 
                         margin-left: 0.75em;
                         margin-top: 0;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
                     }
                     
                 }
@@ -544,12 +557,18 @@ footer
                 &:hover 
                 {
 
+                    .titleMenu
+                    {
+                        width: 65%;
+                    }
 
                     .subMenu 
                     {
+                        
                         span
                         {
-                            
+                            transform: translateX(-70px);
+                            transition: transform 0.5s ease-in-out;
                         }
                         p
                         {
