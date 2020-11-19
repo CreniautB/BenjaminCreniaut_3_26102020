@@ -417,7 +417,7 @@ footer
     background-size: 400px;
     padding-top: 200px;
     
-    .menuCotaniner > h4
+    .menuContaniner > h4
     {
         padding: 0.3em;
         padding-left: 0;
@@ -425,7 +425,7 @@ footer
         width: 10%;
     }
 
-    .menuCotaniner 
+    .menuContaniner 
     {
 
         padding-top: 1em;
@@ -495,10 +495,7 @@ footer
 
                 .titleMenu 
                 { 
-
-                
-
-            
+                    width: 80%;
                     h4
                     {
                         margin: 0.75em;
@@ -640,13 +637,14 @@ footer
 
 
 
-@media (min-width : 820px)
+@media screen and  (min-width : 820px)
 {
 
     #menuFr, #menuPalette, #menuEnchanté, #menuDélice
     {
-        background-size: cover;
-        background-position: top;
+        background-size: 100%;
+        background-position: bottom;
+
     }
 
     
@@ -694,3 +692,37 @@ footer
 
 }
 
+
+@media screen and (max-width : 400px)
+{
+    
+
+    .check
+    {
+        width: 50px!important;
+    }
+    
+
+    .menuContaniner
+    {
+        ul 
+        {
+            li
+            {
+                &:hover 
+                {
+                    .subMenu 
+                    {
+                        span
+                        {
+                            transform: translateX(-50px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
+
+}

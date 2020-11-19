@@ -418,40 +418,40 @@ footer li i {
   padding-top: 200px;
 }
 
-.menu .menuCotaniner > h4 {
+.menu .menuContaniner > h4 {
   padding: 0.3em;
   padding-left: 0;
   border-bottom: 3px solid #99E2D0;
   width: 10%;
 }
 
-.menu .menuCotaniner {
+.menu .menuContaniner {
   padding-top: 1em;
   background-color: #f6f6f6;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
 }
 
-.menu .menuCotaniner h2 {
+.menu .menuContaniner h2 {
   font-family: 'Shrikhand', cursive;
   font-size: 25px;
   margin: 1em;
 }
 
-.menu .menuCotaniner h2 i {
+.menu .menuContaniner h2 i {
   float: right;
 }
 
-.menu .menuCotaniner h4 {
+.menu .menuContaniner h4 {
   font-weight: 300;
   margin: 1em;
 }
 
-.menu .menuCotaniner ul {
+.menu .menuContaniner ul {
   padding: 1em;
 }
 
-.menu .menuCotaniner ul li {
+.menu .menuContaniner ul li {
   position: relative;
   border-radius: 20px;
   margin-bottom: 1em;
@@ -500,7 +500,11 @@ footer li i {
   }
 }
 
-.menu .menuCotaniner ul li .titleMenu h4 {
+.menu .menuContaniner ul li .titleMenu {
+  width: 80%;
+}
+
+.menu .menuContaniner ul li .titleMenu h4 {
   margin: 0.75em;
   margin-bottom: 0.5em;
   font-weight: bold;
@@ -511,7 +515,7 @@ footer li i {
   white-space: nowrap;
 }
 
-.menu .menuCotaniner ul li .titleMenu p {
+.menu .menuContaniner ul li .titleMenu p {
   margin-left: 0.75em;
   margin-top: 0;
   overflow: hidden;
@@ -519,7 +523,7 @@ footer li i {
   white-space: nowrap;
 }
 
-.menu .menuCotaniner ul li .subMenu {
+.menu .menuContaniner ul li .subMenu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -528,14 +532,14 @@ footer li i {
           justify-content: space-between;
 }
 
-.menu .menuCotaniner ul li .subMenu span {
+.menu .menuContaniner ul li .subMenu span {
   text-align: left;
   font-weight: 600;
   margin: 1em;
   margin-top: 80%;
 }
 
-.menu .menuCotaniner ul li .check {
+.menu .menuContaniner ul li .check {
   width: 70px;
   background-color: #99E2D0;
   position: absolute;
@@ -543,11 +547,11 @@ footer li i {
   height: 100%;
 }
 
-.menu .menuCotaniner ul li:hover .titleMenu {
+.menu .menuContaniner ul li:hover .titleMenu {
   width: 65%;
 }
 
-.menu .menuCotaniner ul li:hover .subMenu span {
+.menu .menuContaniner ul li:hover .subMenu span {
   -webkit-transform: translateX(-70px);
           transform: translateX(-70px);
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
@@ -556,12 +560,12 @@ footer li i {
   transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
-.menu .menuCotaniner ul li:hover .subMenu p {
+.menu .menuContaniner ul li:hover .subMenu p {
   white-space: pre;
   overflow: hidden;
 }
 
-.menu .menuCotaniner ul li:hover .check {
+.menu .menuContaniner ul li:hover .check {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -575,7 +579,7 @@ footer li i {
   transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
-.menu .menuCotaniner ul li:hover .check i {
+.menu .menuContaniner ul li:hover .check i {
   font-size: 25px;
   margin: auto;
   color: white;
@@ -615,10 +619,10 @@ footer li i {
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
 }
 
-@media (min-width: 820px) {
+@media screen and (min-width: 820px) {
   #menuFr, #menuPalette, #menuEnchanté, #menuDélice {
-    background-size: cover;
-    background-position: top;
+    background-size: 100%;
+    background-position: bottom;
   }
   #logoContainer img {
     width: 20%;
@@ -650,6 +654,16 @@ footer li i {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .check {
+    width: 50px !important;
+  }
+  .menuContaniner ul li:hover .subMenu span {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
   }
 }
 /*# sourceMappingURL=style.css.map */
