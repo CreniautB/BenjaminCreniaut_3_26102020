@@ -659,11 +659,17 @@ footer li i {
 
 @media screen and (max-width: 400px) {
   .check {
-    width: 50px !important;
+    width: 40px !important;
+  }
+  .menuContaniner ul li .titleMenu {
+    width: 75% !important;
+  }
+  .menuContaniner ul li:hover .titleMenu {
+    width: 55% !important;
   }
   .menuContaniner ul li:hover .subMenu span {
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
+    -webkit-transform: translateX(-40px) !important;
+            transform: translateX(-40px) !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
