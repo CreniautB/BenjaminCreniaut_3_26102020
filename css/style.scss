@@ -236,6 +236,7 @@ header
 #restaurants
 {
     background-color: #f6f6f6;
+    padding-top: 1em;
 
     h2
     {
@@ -410,11 +411,8 @@ footer
 
 .menu
 {
-    
-    background-position: top;
-    background-size: 400px;
     padding-top: 200px;
-    
+  
     .menuContaniner > h4
     {
         padding: 0.3em;
@@ -587,12 +585,8 @@ footer
                         }                        
                     }
                 }
-
-
             }
         }
-
-
     }
     
 }
@@ -627,15 +621,9 @@ footer
     }
 }
 
-@media screen and  (min-width : 820px)
+@media screen and  (min-width : 800px)
 {
 
-    #menuFr, #menuPalette, #menuEnchanté, #menuDélice
-    {
-        background-size: 100%;
-        background-position: bottom;
-
-    }
     
     #logoContainer
     {
@@ -724,4 +712,35 @@ footer
     
     
 
+}
+@media screen and (min-width : 1000px ) {
+    #menuFr, #menuPalette, #menuEnchanté, #menuDélice
+    {
+        background-position-y: -300px!important; 
+    }
+}
+@media screen and (min-width : 700px) {
+
+    #menuFr, #menuPalette, #menuEnchanté, #menuDélice
+    {
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position-y: -200px ;
+    }
+}
+@media screen and (max-width: 700px ) {
+    
+    #menuFr, #menuPalette, #menuEnchanté, #menuDélice
+    {
+        background-position-y: -75px ;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+@media screen and (max-width: 450px ) {
+
+    .menu 
+    {
+        padding-top: 100px;
+    }
 }
