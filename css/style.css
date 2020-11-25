@@ -386,6 +386,11 @@ footer li {
   margin: 1em;
 }
 
+footer li a {
+  color: white;
+  text-decoration: none;
+}
+
 footer li i {
   color: white;
   margin-right: 1em;
