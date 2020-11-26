@@ -133,17 +133,19 @@ header
         {
             margin-top: 1em;
         }
-        h2
+        h1
         {
             font-weight: 900;
             margin-bottom: 0.5em;
+            font-size: 24px;
             
         }
-        h3
+        h2
         {
             color: #656565;
             font-weight: 400;
             margin : 0.4em;
+            font-size: 19px;
 
         }
 
@@ -371,7 +373,12 @@ footer
         }
         li 
         {
-            a{
+            address 
+            {
+                font-style: normal;
+            }
+            a
+            {
                 color: white;
                 text-decoration: none;
             }
@@ -417,7 +424,7 @@ footer
 {
     padding-top: 200px;
   
-    .menuContaniner > h4
+    .menuContaniner > h2
     {
         padding: 0.3em;
         padding-left: 0;
@@ -433,7 +440,7 @@ footer
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
 
-        h2 
+        h1
         {
 
             font-family: 'Shrikhand', cursive;
@@ -446,10 +453,11 @@ footer
             }
         }
 
-        h4 
+        h2
         {
             font-weight: 300;
-            margin: 1em;        
+            margin: 1em;   
+            font-size: 19px;     
         }
 
         ul
@@ -494,7 +502,7 @@ footer
                 { 
                     width: 80%;
              
-                    h4
+                    h3
                     {
                         margin: 0.75em;
                         margin-bottom: 0.5em;
